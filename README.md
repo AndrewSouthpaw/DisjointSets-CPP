@@ -8,14 +8,15 @@ This file provides a basic disjoint-sets data structure (http://en.wikipedia.org
 If you want to use this data structure for a type that does not have a standard hash function defined, you can add this code:
 
 ```
+#include <functional>  // might be necessary?
 namespace std {
 	namespace tr1 {
 		template <>
-		struct hash<Loc>{
+		struct hash<Type>{
 			public :
-			size_t operator()(const Loc &loc ) const
+			size_t operator()(const Type &a ) const
 			{
-				return hashCode(loc);
+				return ###hash code goes here###;
 			}
 		};
 	};
