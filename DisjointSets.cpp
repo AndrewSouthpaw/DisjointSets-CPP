@@ -12,7 +12,7 @@
 template <typename KeyType>
 DisjointSets<KeyType>::DisjointSets() {
 	numSets = 0;
-	map = tr1::unordered_map<KeyType, Node>();
+	map = unordered_map<KeyType, Node>();
 }
 
 

@@ -25,3 +25,10 @@ namespace std {
 
 (Based on this reference: http://marknelson.us/2011/09/03/hash-functions-for-c-unordered-containers/)
 
+This implementation uses <unordered_map>, standard in C++11. If your compiler complains, a likely fix is to change it to:
+
+```
+#include <tr1/unordered_map>
+```
+
+and append `tr1::` before any instantiation of `unordered_map`.

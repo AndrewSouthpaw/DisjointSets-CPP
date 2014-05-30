@@ -11,7 +11,7 @@
 
 #include <iostream>
 #include "hashmap.h"
-#include <tr1/unordered_map>
+#include <unordered_map>
 
 template <typename KeyType>
 class DisjointSets {
@@ -46,7 +46,7 @@ private:
 		int rank;
 	};
 	int numSets;	/* Number of sets in disjoint-sets */
-	tr1::unordered_map<KeyType, Node> map;		/* Map of KeyType to Node  */
+	unordered_map<KeyType, Node> map;		/* Map of KeyType to Node  */
 };
 
 #include "DisjointSets.cpp"
