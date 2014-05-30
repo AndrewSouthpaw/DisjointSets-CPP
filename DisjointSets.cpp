@@ -12,7 +12,7 @@
 template <typename KeyType>
 DisjointSets<KeyType>::DisjointSets() {
 	numSets = 0;
-	map = HashMap<KeyType, Node>();
+	map = tr1::unordered_map<KeyType, Node>();
 }
 
 
@@ -29,7 +29,7 @@ DisjointSets<KeyType>::~DisjointSets() {
  */
 template <typename KeyType>
 bool DisjointSets<KeyType>::contains(KeyType& node) {
-	return map.containsKey(node);
+	return map.find(node) != map.end();
 }
 
 /* Function: makeSet
@@ -111,11 +111,11 @@ void DisjointSets<KeyType>::link(KeyType& node1, KeyType& node2) {
 			map[root2].parent = root1;
 			map[root1].rank++;
 		}
-
+        
 		/* Decrement number of sets */
 		numSets--;
 	}
-
+    
 }
 
 
