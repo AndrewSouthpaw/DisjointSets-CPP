@@ -7,6 +7,7 @@ This file provides a basic disjoint-sets data structure (http://en.wikipedia.org
 
 If you want to use this data structure for a type that does not have a standard hash function defined, you can add this code:
 
+```
 namespace std {
 	namespace tr1 {
 		template <>
@@ -19,6 +20,7 @@ namespace std {
 		};
 	};
 };
+```
 
 (Based on this reference: http://marknelson.us/2011/09/03/hash-functions-for-c-unordered-containers/)
 
