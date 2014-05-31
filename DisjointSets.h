@@ -10,7 +10,6 @@
 #define _DisjointSets_h
 
 #include <iostream>
-#include "hashmap.h"
 #include <unordered_map>
 
 template <typename KeyType>
